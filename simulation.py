@@ -83,6 +83,7 @@ def defaults():
 
 # Метод добавления базовых правил
 def base_rules():
+    global number_rule
     rules.append((red_group, red_group, 2))
     rules_label_all.append(UILabel(relative_rect=pygame.Rect((10, 410), (300, 20)), text='Red attracted to Red with 2 force', manager=ui_manager))
     rules.append(((green_group, green_group, 2)))
@@ -93,6 +94,7 @@ def base_rules():
     rules_label_all.append(UILabel(relative_rect=pygame.Rect((10, 500), (300, 20)), text='Blue attracted to Red with 1 force', manager=ui_manager))
     rules.append(((blue_group, green_group, 1)))
     rules_label_all.append(UILabel(relative_rect=pygame.Rect((10, 530), (300, 20)), text='Blue attracted to Green with 1 force', manager=ui_manager))
+    number_rule = 5
 
 # Метод создания группы частиц
 def create_particles(number, color):
